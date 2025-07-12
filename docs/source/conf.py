@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'France Bus API'
-copyright = '2025, Bastien Charrier'
-author = 'Bastien Charrier'
+project = 'Calva API'
+copyright = '2025, Lukas Schneider'
+author = 'Lukas Schneider'
 
 release = '0.1'
 version = '0.1.0'
