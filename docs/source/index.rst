@@ -35,8 +35,8 @@ Query dataset records.
 - ``exclude``: Exclude specific facet values.
 - ``lang``: Language (default: "fr").
 - ``timezone``: Timezone for datetime fields (e.g., "UTC").
-- ``include_links`` *(boolean)*: Adds HATEOAS links if `true`.
-- ``include_app_metas`` *(boolean)*: Includes application metadata if `true`.
+- ``include_links`` *(boolean)*: Adds HATEOAS links if true.
+- ``include_app_metas`` *(boolean)*: Includes application metadata if true.
 
 **Example Response:**
 
@@ -51,8 +51,7 @@ Query dataset records.
            "lat": 46.7306,
            "lon": 4.50083
          },
-         "population": 29278,
-         ...
+         "population": 29278
        }
      ]
    }
@@ -141,7 +140,7 @@ Export a dataset in CSV format with extra CSV-specific parameters.
 
 - ``delimit``: Field delimiter (e.g., `;`).
 - ``list_separator``: Separator for multivalue fields (e.g., `,`).
-- ``quote_all`` *(boolean)*: Quote all fields if `true`.
+- ``quote_all`` *(boolean)*: Quote all fields if true.
 - ``with_bom`` *(boolean)*: Add BOM for Excel compatibility (default `true` in v2.1).
 
 GET /datasets/{dataset_id}/exports/parquet
@@ -158,9 +157,9 @@ Export a dataset in GPX format (for geographic data).
 
 **Additional GPX Parameters:**
 
-- ``name_field``: Field to use as GPX `name`.
-- ``description_field_list``: Fields used for GPX `description`.
-- ``use_extension`` *(boolean)*: Use `<extension>` tag (default: `true` in v2.1).
+- ``name_field``: Field to use as GPX name.
+- ``description_field_list``: Fields used for GPX description.
+- ``use_extension`` *(boolean)*: Use `<extension>` tag (default: true in v2.1).
 
 Response Codes
 ==============
@@ -185,4 +184,103 @@ Additional References
 
 - API Console: https://ressources.data.sncf.com/api/explore/v2.1/console
 - ODSQL Language Reference: https://docs.opendatasoft.com/en/data_exploration/04_analyzing_data/03_using_query_language.html
-- Horaires Bus: https://horairesbus.github.io/ — This community-driven website offers useful tools and examples for exploring French public transportation schedules. It can be a complementary resource when using the SNCF Open Data API.
+
+How to Use Calva
+================
+
+Calva is a powerful, REPL-powered, and beginner-friendly development environment for Clojure and ClojureScript, built as a Visual Studio Code extension.
+
+Prerequisites
+-------------
+Before getting started, make sure you have the following tools installed:
+
+1. **Visual Studio Code**  
+   Download: https://code.visualstudio.com/
+
+2. **Java Development Kit (JDK)** – Version 11 or higher recommended  
+   Download: https://adoptium.net/
+
+3. **Leiningen or Clojure CLI tools**  
+   - Leiningen: https://leiningen.org/  
+   - Clojure CLI: https://clojure.org/guides/getting_started
+
+4. **Node.js** (optional, for ClojureScript development)  
+   Download: https://nodejs.org/
+
+Step-by-Step Setup
+------------------
+
+1. **Install Calva**
+   - Open Visual Studio Code
+   - Go to Extensions panel (Ctrl+Shift+X)
+   - Search for *Calva*
+   - Click **Install**
+
+2. **Create a Clojure Project**
+
+   Option A: Leiningen  
+   .. code-block:: bash
+
+      lein new app my-first-app  
+      cd my-first-app
+
+   Option B: Clojure CLI  
+   .. code-block:: bash
+
+      clj -Ttools new :template app :name my-first-app  
+      cd my-first-app
+
+3. **Open the Project in VS Code**
+   - Go to File > Open Folder...
+   - Select your project folder
+
+4. **Start a REPL**
+   - Press Ctrl+Shift+P (or Cmd+Shift+P on macOS)
+   - Choose: *Calva: Start a Project REPL and Connect*
+   - Select REPL type (Leiningen or deps.edn)
+
+Trying Calva for the First Time
+-------------------------------
+
+1. Open `src/my_first_app/core.clj`  
+2. Replace its contents with:
+
+.. code-block:: clojure
+
+   (ns my-first-app.core)
+
+   (defn -main []
+     (println "Hello, Calva!"))
+
+3. Place your cursor on the `(println ...)` expression  
+4. Press Ctrl+Enter (or Cmd+Enter on macOS) to evaluate in REPL
+
+Key Features
+------------
+
+- Inline evaluation and REPL output
+- Structural editing with Paredit
+- Code formatting (Alt+Shift+F)
+- Syntax highlighting and rainbow brackets
+- Code navigation and test running
+- Linting and refactoring tools
+
+Community & Support
+-------------------
+
+- Join #calva on Clojurians Slack: https://clojurians.net/
+- For beginners: join #beginners channel
+- Official docs: https://calva.io
+
+Supporting Calva
+----------------
+
+Calva is free and open-source. You can help by:
+
+- Starring the GitHub repo: https://github.com/BetterThanTomorrow/calva
+- Becoming a sponsor: https://github.com/sponsors/BetterThanTomorrow
+
+Conclusion
+----------
+
+You now have a full Clojure development environment using Calva in VS Code. With REPL-driven workflows and modern tooling, Calva helps you write expressive and maintainable Clojure code.
