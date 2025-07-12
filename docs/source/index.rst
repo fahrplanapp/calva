@@ -1,5 +1,5 @@
-Calva Open Data API Documentation
-================================
+Calva Open Data API
+=====================
 
 Version: v2.1  
 Base URL: https://ressources.data.sncf.com/api/explore/v2.1/catalog
