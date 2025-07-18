@@ -284,3 +284,15 @@ Conclusion
 ----------
 
 You now have a full Clojure development environment using Calva in VS Code. With REPL-driven workflows and modern tooling, Calva helps you write expressive and maintainable Clojure code.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Building API-driven Clojure
+
+   practical-integration/building-your-first-api-driven-clojure-app
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Automating Data Export
+
+   practical-integration/automating-data-export-from-sncf-datasets
